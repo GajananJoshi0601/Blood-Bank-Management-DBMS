@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate Blood - Blood Bank Management System</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f8f9fa;
+      overflow: hidden;
+    }
+
+    /* Background image with red overlay fade */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(rgba(217, 83, 79, 0.4), rgba(217, 83, 79, 0.6)), 
+        url('https://images.pexels.com/photos/12193090/pexels-photo-12193090.jpeg?cs=srgb&dl=pexels-franco30-12193090.jpg&fm=jpg') no-repeat center center/cover;
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    /* Navbar */
+    nav {
+      background: rgba(217, 83, 79, 0.9);
+      padding: 15px 0;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Form styling */
+    .donate-form {
+      background: white;
+      padding: 20px 15px;
+      margin-top: 120px;
+      margin-bottom: 80px;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      max-width: 460px;
+      width: 90%;
+      z-index: 5;
+    }
+
+    .donate-form h2 {
+      color: #d9534f;
+      margin-bottom: 10px;
+    }
+
+    .donate-form p {
+      margin-bottom: 15px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      text-align: left;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #d9534f;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 18px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #c9302c;
+    }
+
+    footer {
+      background: rgba(217, 83, 79, 0.9);
+      color: white;
+      padding: 15px;
+      width: 100%;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Blurred Background with red fade -->
+<div class="background"></div>
+
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/donate">Donate</a></li>
+    <li><a href="/inventory">Inventory</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Donation Form -->
+<section class="donate-form">
+  <h2>Donate Blood & Save a Life</h2>
+  <p>Fill out the form below to schedule your blood donation.</p>
+
+  <form id="donate-form" action="/post" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="bloodtype">Blood Type:</label>
+    <select id="bloodtype" name="bloodtype" required>
+      <option value="">Select Blood Type</option>
+      <option value="A+">A+</option>
+      <option value="A-">A-</option>
+      <option value="B+">B+</option>
+      <option value="B-">B-</option>
+      <option value="O+">O+</option>
+      <option value="O-">O-</option>
+      <option value="AB+">AB+</option>
+      <option value="AB-">AB-</option>
+    </select>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" required>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Blood Bank Management System. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
