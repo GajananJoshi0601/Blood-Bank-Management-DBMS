@@ -62,8 +62,10 @@
   Contributions are welcome! Feel free to fork the repository and open a pull request with improvements or feature suggestions.
 </p>
 
-<h2>📄 License</h2>
+<h2>License</h2>
+<p>This project is licensed under the project owner : Gajanan Joshi.</p>
 
-<p>
-  This project is licensed under the <strong>MIT License</strong> - see the LICENSE file for details.
-</p>
+<h2>Contact</h2>
+<p>If you have any questions, feel free to reach out:</p>
+<ul>
+    <li>Email: <a href="mailto:gajananjoshi0601@gmail.com">gajananjoshi0601@gmail.com</a></li>
